@@ -25,9 +25,9 @@ jobs:
           fetch-depth: 1
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: "20"
+          node-version: "latest"
           cache: "npm"
 
       - name: Install dependencies
@@ -44,14 +44,14 @@ jobs:
           Compress-Archive -Path "release/win-unpacked/*" -DestinationPath "Termix-Windows-Portable.zip"
 
       - name: Upload Windows Portable Artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v4.6.2
         with:
           name: Termix-Windows-Portable
           path: Termix-Windows-Portable.zip
           retention-days: 30
 
       - name: Upload Windows Installer Artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v4.6.2
         with:
           name: Termix-Windows-Installer
           path: release/*.exe
@@ -68,9 +68,9 @@ jobs:
           fetch-depth: 1
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6
         with:
-          node-version: "20"
+          node-version: "latest"
           cache: "npm"
 
       - name: Install dependencies
@@ -86,7 +86,7 @@ jobs:
           cd ../..
 
       - name: Upload Linux Portable Artifact
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v4.6.2
         with:
           name: Termix-Linux-Portable
           path: Termix-Linux-Portable.zip
