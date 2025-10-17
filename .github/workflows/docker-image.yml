@@ -87,7 +87,7 @@ jobs:
           # Determine registry and image name
           if [ "${{ github.event.inputs.registry }}" == "dockerhub" ]; then
             echo "REGISTRY=docker.io" >> $GITHUB_ENV
-            echo "IMAGE_NAME=bugattiguy527/termix" >> $GITHUB_ENV
+            echo "IMAGE_NAME=lamminh2012/termix" >> $GITHUB_ENV
           else
             echo "REGISTRY=ghcr.io" >> $GITHUB_ENV
             echo "IMAGE_NAME=$REPO_OWNER/termix" >> $GITHUB_ENV
