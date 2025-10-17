@@ -99,7 +99,7 @@ jobs:
           context: .
           file: ./docker/Dockerfile
           push: true
-          platforms: linux/amd64,linux/arm64
+          platforms: linux
           tags: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
           labels: |
             org.opencontainers.image.source=https://github.com/${{ github.repository }}
